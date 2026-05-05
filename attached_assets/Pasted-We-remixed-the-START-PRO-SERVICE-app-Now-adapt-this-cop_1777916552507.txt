@@ -1,0 +1,167 @@
+We remixed the START PRO SERVICE app. Now adapt this copy into a full lead-generation website for my own repair service and shop.
+
+Important:
+This is NOT for START PRO SERVICE anymore.
+Do not use START PRO SERVICE name, logo, wording, or company-specific warranty-only messaging.
+
+Temporary brand name:
+AGROMASTER SERVICE
+
+Business:
+Repair service and future shop for garden equipment, tools and equipment in Bucharest / Ilfov.
+
+Services:
+- pressure washers / aparate de spălat cu presiune
+- chainsaws / drujbe
+- brushcutters / motocoase
+- lawn mowers / mașini de tuns iarba
+- generators / generatoare
+- pumps / pompe
+- electric tools / scule electrice
+- battery tools / scule pe acumulator
+- garden equipment / utilaje de grădină
+- construction and workshop equipment / echipamente de lucru
+
+Goal:
+Create a professional Romanian-language website ready for Google Ads traffic and service lead generation.
+
+Keep existing working features:
+- repair request form
+- WhatsApp-like demo flow
+- /multumim/[id]
+- /cerere/[token]
+- admin login
+- admin requests list
+- admin request detail
+- statuses
+- notes
+- AWB fields
+- CSV export
+
+Do not break existing app logic.
+
+Main changes:
+1. Replace START PRO SERVICE branding with AGROMASTER SERVICE.
+2. If no logo file exists, create a clean text-based logo: AGROMASTER SERVICE.
+3. Keep a professional service style: red / dark gray / white or a clean industrial palette.
+4. Change the homepage from warranty-only to a general repair service landing page.
+5. The website language should be Romanian.
+
+Create or update these public pages:
+
+1. Homepage /
+Purpose:
+Main commercial landing page for service leads.
+
+Sections:
+- Hero:
+  Title: "Reparații scule, utilaje de grădină și echipamente în București"
+  Subtitle: "Diagnosticare, service și preluare pentru aparate de spălat cu presiune, drujbe, motocoase, generatoare, mașini de tuns iarba și scule electrice."
+  CTAs:
+  "Solicită reparație"
+  "Trimite cerere rapidă"
+- Service categories grid:
+  pressure washers, chainsaws, brushcutters, lawn mowers, generators, pumps, electric tools, battery tools.
+- How it works:
+  1. Completezi cererea
+  2. Confirmăm datele
+  3. Trimiți sau predai echipamentul
+  4. Facem diagnosticarea
+  5. Primești status și soluție
+- Trust section:
+  experience with tools and garden equipment, clear status tracking, organized workflow, photos/documents, transparent process.
+- CTA section to /cerere-service and /whatsapp-demo.
+
+2. /reparatii
+General service page.
+Explain what equipment we repair and how the process works.
+
+3. Category landing pages:
+- /reparatii-aparate-spalat-cu-presiune
+- /reparatii-drujbe
+- /reparatii-motocoase
+- /reparatii-generatoare
+- /reparatii-masini-tuns-iarba
+- /reparatii-scule-electrice
+
+Each page should have:
+- Romanian SEO title style heading
+- common problems
+- what the client should prepare
+- CTA to repair request
+- CTA to WhatsApp demo
+- small FAQ
+- no fake claims, no fake reviews, no fake prices.
+
+4. /cerere-service
+This should use the existing repair request form, but wording should be for general repair service, not only warranty.
+Fields can stay similar:
+- name
+- phone
+- WhatsApp
+- email optional
+- address / pickup address
+- equipment type
+- brand
+- model
+- serial number optional
+- problem description
+- photos
+- accessories sent
+- fuel emptied confirmation for petrol equipment
+- GDPR / terms acceptance
+
+5. /whatsapp-demo
+Adapt wording to AGROMASTER SERVICE and general repair service, not START PRO warranty service.
+After successful submit, keep the button:
+"Vezi cererea și statusul"
+leading to /multumim/[publicCode].
+
+6. /multumim/[id]
+Adapt branding and text to AGROMASTER SERVICE.
+Keep status link.
+
+7. /cerere/[token]
+Keep safe public status page.
+Do not expose phone, email, address, documents, files, AWB, internal notes.
+
+8. Admin:
+Keep existing admin functionality.
+Replace branding from START PRO SERVICE to AGROMASTER SERVICE.
+
+Google Ads readiness:
+Add clear CTA buttons.
+Make pages mobile-first and fast.
+Add basic metadata for public pages:
+- title
+- description
+Use Romanian text.
+Do not add Google Ads scripts yet.
+Do not add payment.
+Do not add e-commerce checkout yet.
+
+Future shop:
+Add a small section on homepage:
+"În curând: piese, accesorii și echipamente"
+But do not build full e-commerce now.
+
+Safety:
+Do not claim official authorized service unless explicitly stated.
+Do not claim warranty for brands unless stated.
+Use neutral wording:
+"service pentru", "reparații pentru", "lucrăm cu echipamente de tip..."
+not "service autorizat".
+
+After changes run:
+- npm run lint
+- npm run type-check
+- npm run build
+
+Fix only errors related to this transformation.
+
+At the end report:
+1. Files changed.
+2. New pages/routes added.
+3. Existing repair request flow status.
+4. Whether lint/type-check/build passed.
+5. Whether ready for Replit redeploy.

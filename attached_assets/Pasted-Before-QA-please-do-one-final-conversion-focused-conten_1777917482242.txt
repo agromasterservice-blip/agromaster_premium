@@ -1,0 +1,117 @@
+Before QA, please do one final conversion-focused content and UX improvement pass for the AGROMASTER SERVICE website.
+
+Goal:
+Make the site more convincing, more unique and higher-converting for repair service leads, while keeping the existing working flows safe.
+
+Important:
+Do NOT add complex new features.
+Do NOT change business logic.
+Do NOT change database models.
+Do NOT change routes.
+Do NOT break the existing request form, WhatsApp demo, multumim page, public status page or admin.
+Do NOT add fake reviews, fake prices, fake claims or “authorized service” claims.
+
+Add or improve these high-conversion sections on the homepage and relevant service pages:
+
+1. Digital differentiation section
+Add a clear section with the message:
+
+Title:
+"Service organizat digital, nu doar un număr de telefon"
+
+Content ideas:
+- "Trimiți cererea online în câteva minute"
+- "Atașezi poze, video și detalii despre echipament"
+- "Primești număr de cerere și link de status"
+- "Poți urmări online etapa reparației"
+- "Proces mai clar și mai organizat"
+
+2. Fast request section
+Add a clear “2 minute request” message:
+
+Examples:
+- "Trimite cererea în 2 minute"
+- "Fără cont"
+- "Primești număr de cerere și status"
+
+Add strong CTA buttons:
+- "Solicită reparație"
+- "Trimite cerere rapidă"
+- "Încearcă demo WhatsApp"
+
+3. Transparent 5-step process
+Add a visually clear process section:
+1. Trimiți cererea
+2. Confirmăm datele
+3. Diagnosticăm echipamentul
+4. Reparăm / comunicăm soluția
+5. Primești status / returnare
+
+4. What we repair / common problems
+Improve service-category content so it feels practical and specific.
+
+For example include common symptoms like:
+- nu pornește
+- pierde putere
+- nu face presiune
+- curge apă
+- nu produce curent
+- vibrații
+- zgomot anormal
+- se oprește la accelerație
+
+Apply this especially to:
+- pressure washers
+- chainsaws
+- brushcutters
+- generators
+- lawn mowers
+- electric tools
+
+5. Courier / sending equipment message
+Add a trust-building section that says clearly, but safely:
+
+- "Opțiune de trimitere prin curier, după confirmarea cererii"
+- "Pentru anumite echipamente, preluarea / trimiterea se poate organiza după confirmarea solicitării"
+
+Do not promise free pickup unless already supported.
+
+6. B2B / multiple equipment section
+Add a small section for companies and customers with multiple machines:
+
+Suggested title:
+"Ai mai multe echipamente?"
+
+Suggested content:
+- "Lucrăm și cu firme, administratori și clienți cu mai multe utilaje sau scule"
+- "Poți trimite o solicitare pentru mai multe echipamente"
+- "În curând: flux dedicat pentru service și mentenanță"
+
+Optional CTA:
+- "Solicită o ofertă"
+
+7. Trust and clarity polish
+Improve wording across public pages so the site feels professional and conversion-focused:
+- clear Romanian
+- practical service tone
+- no fake claims
+- no exaggerated promises
+- no START PRO references
+
+Apply this conversion polish to:
+- homepage
+- /reparatii
+- category pages
+- /cerere-service
+- /whatsapp-demo intro text if useful
+
+After changes run:
+- npm run lint
+- npm run type-check
+- npm run build
+
+Then report:
+1. Which conversion sections were added or improved.
+2. Which files changed.
+3. Whether lint/type-check/build passed.
+4. Whether the project is ready for the QA pass.

@@ -1,0 +1,106 @@
+CRITICAL PRODUCTION BUGS: admin auth redirects use wrong internal host on Replit.
+
+Published app:
+https://start-pro-service--agromaster.replit.app
+
+Current bugs in production:
+1. After successful admin login, the app redirects to:
+https://0.0.0.0:5000/admin/cereri
+
+2. After clicking logout from admin, the app redirects to:
+https://0.0.0.0:5000/admin/login
+
+Both must redirect to the public Replit domain:
+https://start-pro-service--agromaster.replit.app
+
+Please fix both bugs and prepare the project for redeploy.
+
+Important Replit Deployment secrets:
+Make sure the app expects and uses this env variable in production:
+
+APP_URL=https://start-pro-service--agromaster.replit.app
+
+Optionally also support:
+NEXT_PUBLIC_APP_URL=https://start-pro-service--agromaster.replit.app
+
+If these secrets are missing, tell me clearly that I must add them in Replit Deployment secrets:
+- APP_URL
+- NEXT_PUBLIC_APP_URL if needed
+
+Requirements:
+1. Search the project for all admin authentication redirect logic:
+   - login success redirect
+   - logout redirect
+   - admin auth middleware redirects
+   - any helper that builds absolute URLs
+
+2. Search for:
+   - 0.0.0.0
+   - localhost
+   - 5000
+   - request.url
+   - request.nextUrl.origin
+   - headers().get("host")
+   - NextResponse.redirect
+   - redirect(
+   - admin/login
+   - admin/cereri
+
+3. Do not use internal host, localhost, 0.0.0.0, or port 5000 for public redirects in production.
+
+4. Add or update a safe helper if needed, for example:
+   - getPublicUrl(path)
+   - it should use process.env.APP_URL first;
+   - fallback to process.env.NEXT_PUBLIC_APP_URL if needed;
+   - fallback to relative/local behavior only for local development.
+
+5. Admin login success must redirect to:
+   https://start-pro-service--agromaster.replit.app/admin/cereri
+
+6. Admin logout must redirect to:
+   https://start-pro-service--agromaster.replit.app/admin/login
+
+7. Do not change:
+   - admin credentials;
+   - database models;
+   - business logic;
+   - routes;
+   - form submit logic except if needed to avoid regression;
+   - WhatsApp demo flow;
+   - public status page data exposure.
+
+8. Confirm that the previous repair request submit redirect still works:
+   - regular form submit goes to /multumim/[id] on the public .replit.app domain;
+   - no 0.0.0.0;
+   - no localhost.
+
+9. Confirm that /whatsapp-demo submit still works and creates a request.
+
+10. Confirm that /cerere/[token] still shows only safe public data and does not expose:
+   - phone;
+   - email;
+   - address;
+   - uploaded files;
+   - warranty documents;
+   - internal notes;
+   - AWB numbers;
+   - admin-only fields.
+
+11. Run:
+   npm run lint
+   npm run type-check
+   npm run build
+
+12. Fix only errors related to this redirect issue.
+
+At the end, report:
+1. Which files changed.
+2. Exactly how login redirect was fixed.
+3. Exactly how logout redirect was fixed.
+4. Which Replit Deployment secrets are required.
+5. Whether lint, type-check and build passed.
+6. Whether the project is ready for Replit redeploy.
+
+Do not add new features.
+Do not add email notifications.
+Do not connect WhatsApp API, Cargus API, eColet, SmartBill or Gincore API.

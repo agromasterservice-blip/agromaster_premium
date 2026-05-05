@@ -1,0 +1,60 @@
+Enhance /whatsapp-demo final step, but keep the existing working flow safe.
+
+Current behavior:
+- /whatsapp-demo creates a RepairRequest successfully.
+- The request appears in admin.
+- Do not break this.
+
+Goal:
+After successful request creation in /whatsapp-demo, keep the final success message in the chat, but also show a clear red button that opens the existing confirmation page:
+
+/multumim/[publicCode]
+
+The confirmation page already contains:
+- request number;
+- status;
+- status tracking link /cerere/[token].
+
+Requirements:
+1. Do not auto-redirect immediately from /whatsapp-demo.
+2. After successful submit, show the created request number in the chat.
+3. Add a button:
+   “Vezi cererea și statusul”
+4. This button must navigate to:
+   /multumim/[publicCode]
+5. Use the publicCode returned by the existing create request API.
+6. If the API already returns successUrl, use that successUrl.
+7. The link must be safe in production:
+   - no 0.0.0.0
+   - no localhost
+   - no internal port
+   - prefer relative path like /multumim/SPS-2026-XXXXXX
+8. Do not change:
+   - regular homepage form submit flow;
+   - admin login/logout redirects;
+   - public status page;
+   - database models;
+   - existing routes;
+   - admin functionality.
+9. Do not add new features beyond this button.
+10. Keep current red START PRO SERVICE branding.
+11. After changes run:
+   npm run lint
+   npm run type-check
+   npm run build
+
+Final verification:
+1. /whatsapp-demo opens.
+2. Chat flow still works.
+3. Submit creates a RepairRequest.
+4. Final chat message shows request number.
+5. Button “Vezi cererea și statusul” appears.
+6. Clicking the button opens /multumim/[publicCode].
+7. /multumim/[publicCode] shows request number and status link.
+8. /cerere/[token] still shows only safe public data.
+9. No redirect or link contains 0.0.0.0 or localhost.
+
+Report:
+- files changed;
+- whether lint/type-check/build passed;
+- whether the project is ready for Replit redeploy.

@@ -1,0 +1,131 @@
+Do a premium visual UX polish pass for the AGROMASTER SERVICE website.
+
+Goal:
+Make the website feel like a serious, modern, high-trust repair service platform, not a basic generated template.
+
+Important:
+Do NOT change business logic.
+Do NOT change database models.
+Do NOT change routes.
+Do NOT break form submit, WhatsApp demo, multumim page, public status page or admin.
+Do NOT add external APIs.
+Do NOT add fake reviews, fake prices, fake claims or “authorized service” claims.
+Do NOT add new complex features.
+
+Visual direction:
+- professional repair/service business
+- clean, modern, trustworthy
+- red / white / dark gray palette
+- industrial but not dirty
+- suitable for garden equipment, tools and equipment
+- mobile-first
+- clear CTAs
+- high conversion landing page style
+
+Improve the public website UI:
+
+1. Homepage hero
+Make the hero section look premium:
+- strong headline
+- clear subtitle
+- two CTA buttons
+- trust bullets
+- clean card or visual panel showing:
+  “Cerere online”
+  “Status digital”
+  “Service scule și utilaje”
+- avoid clutter
+
+2. CTA buttons
+Make primary buttons more visible and consistent:
+- red primary
+- dark secondary
+- clear hover/focus states
+- same style across homepage, service pages, forms and WhatsApp demo
+
+3. Cards and sections
+Improve cards:
+- consistent border radius
+- soft shadows
+- clean spacing
+- better hierarchy
+- no cramped text
+- service category cards should look clickable and professional
+
+4. Service categories
+Make the “Ce reparăm” / service categories section visually stronger:
+- icon or simple visual mark for each category
+- short practical copy
+- CTA per category or clear link to detail page
+
+5. Digital service section
+Make the “Service organizat digital” section visually stand out:
+- process cards or timeline
+- 5-step flow
+- status tracking highlighted
+- use red accent line or numbered badges
+
+6. Forms
+Improve form UX:
+- clear section headers
+- better spacing
+- red focus states
+- helpful microcopy
+- mobile-friendly fields
+- submit button prominent
+- keep existing validation and logic unchanged
+
+7. WhatsApp demo
+Keep chat concept but make it branded:
+- AGROMASTER SERVICE header
+- red branding, not green
+- clean message bubbles
+- final success state with “Vezi cererea și statusul” button
+- do not break the working flow
+
+8. Multumim and public status pages
+Make them feel polished:
+- clear success card
+- request number prominent
+- status link/button visible
+- public status page clean and safe
+- do not expose private data
+
+9. Admin
+Apply only light visual polish:
+- branding in header/login
+- consistent red buttons
+- keep admin practical and readable
+- do not overdesign admin pages
+
+10. Mobile check
+Make sure public pages look good on mobile:
+- hero not too tall
+- buttons stack properly
+- cards readable
+- forms usable
+- no horizontal scroll
+
+11. Copy polish
+Improve Romanian copy where needed:
+- natural, professional tone
+- service-focused
+- no exaggerated claims
+- no “best in Romania”
+- no “authorized service” unless explicitly stated
+
+After changes run:
+- npm run lint
+- npm run type-check
+- npm run build
+
+Fix only visual/UX-related issues.
+
+At the end report:
+1. What visual improvements were made.
+2. Which files changed.
+3. Whether public pages remain functional.
+4. Whether form submit still works.
+5. Whether WhatsApp demo still works.
+6. Whether lint/type-check/build passed.
+7. Whether ready for final QA and Replit redeploy.

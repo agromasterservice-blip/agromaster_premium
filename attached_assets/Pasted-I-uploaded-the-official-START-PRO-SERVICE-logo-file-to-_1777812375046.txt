@@ -1,0 +1,58 @@
+I uploaded the official START PRO SERVICE logo file to:
+
+public/start-pro-service-logo.png
+
+In the app, use this image path:
+
+/start-pro-service-logo.png
+
+Please update the app branding to match START PRO SERVICE.
+
+Goal:
+Make the app look like a real branded START PRO SERVICE product, not a generic green template.
+
+Branding requirements:
+1. Replace the current green color palette with a red / white / dark gray palette.
+2. Use colors that match the uploaded logo:
+   - primary red
+   - dark red
+   - white
+   - light gray backgrounds
+   - dark gray / charcoal text
+3. Use the official logo in the UI:
+   - homepage / garantie form header
+   - whatsapp-demo header
+   - multumim confirmation page
+   - public status page /cerere/[token]
+   - admin login page
+   - admin layout/header in a small clean way
+4. Do not make the logo huge. Keep it professional, crisp, and proportional.
+5. Keep the interface clean, modern, and suitable for a Romanian service company.
+6. Buttons, links, active states, focus states, highlights and main accents should use the new red branding.
+7. The WhatsApp demo can still look like a chat, but adapt the header and brand elements to START PRO SERVICE red branding.
+8. The admin area should stay practical and readable. Apply branding lightly: logo, header, accent buttons, active states.
+
+Very important:
+1. Do not change business logic.
+2. Do not change routes.
+3. Do not change database models unless absolutely necessary.
+4. Do not change submit logic.
+5. Do not change redirect logic.
+6. Do not remove the public status link.
+7. Do not remove the admin functionality.
+8. Do not add new features.
+9. Do not connect WhatsApp API, Cargus API, SmartBill, eColet or Gincore API.
+10. Only make branding and visual polish changes.
+
+After changes, run:
+- npm run lint
+- npm run type-check
+- npm run build
+
+Fix only errors related to the branding changes.
+
+At the end, summarize:
+1. Which files were changed.
+2. Where the logo is used.
+3. Whether lint, type-check and build passed.
+4. Whether the project is ready for Replit redeploy.
