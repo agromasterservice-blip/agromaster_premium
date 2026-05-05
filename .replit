@@ -1,0 +1,46 @@
+modules = ["nodejs-20"]
+
+run = "bash -lc 'export DATABASE_URL=\"file:./dev.db\" ADMIN_EMAIL=\"admin@startproservice.ro\" ADMIN_PASSWORD=\"StartPro2026!\" && npx prisma generate && npx prisma migrate dev --name init && npm run prisma:seed && npm run dev -- -H 0.0.0.0 -p 3000'"
+
+[deployment]
+build = "npm install && npx prisma generate && npx prisma migrate deploy && npm run prisma:seed && npm run build"
+run = "npx prisma generate && npx prisma migrate deploy && npm run prisma:seed && npm run start"
+
+[agent]
+expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "export DATABASE_URL=\"file:./dev.db\" ADMIN_EMAIL=\"admin@startproservice.ro\" ADMIN_PASSWORD=\"StartPro2026!\" && npx prisma generate && npx prisma migrate dev --name init && npm run prisma:seed && npm run dev -- -H 0.0.0.0 -p 5000"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[userenv]
+
+[userenv.production]
+APP_URL = "https://start-pro-service--agromaster.replit.app"
+
+[nix]
+packages = ["zip"]

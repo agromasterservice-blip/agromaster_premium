@@ -1,0 +1,10 @@
+
+> start-pro-service-mvp@0.1.0 start
+> node node_modules/next/dist/bin/next start -H 0.0.0.0
+
+   ▲ Next.js 15.5.15
+   - Local:        http://localhost:3000
+   - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 1921ms

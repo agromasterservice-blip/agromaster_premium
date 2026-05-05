@@ -1,0 +1,36 @@
+   ▲ Next.js 15.5.15
+   - Local:        http://127.0.0.1:3000
+   - Network:      http://127.0.0.1:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 2.3s
+ ○ Compiling /whatsapp-demo ...
+ ✓ Compiled /whatsapp-demo in 4s (564 modules)
+ GET /whatsapp-demo 200 in 4864ms
+ GET /whatsapp-demo 200 in 139ms
+ ○ Compiling /api/public/repair-requests ...
+ ✓ Compiled /api/public/repair-requests in 1374ms (591 modules)
+ POST /api/public/repair-requests 200 in 2087ms
+ GET /whatsapp-demo 200 in 677ms
+ ○ Compiling /admin/cereri ...
+ ✓ Compiled /admin/cereri in 672ms (680 modules)
+ GET /whatsapp-demo 200 in 71ms
+ GET /admin/cereri 200 in 1542ms
+ POST /api/public/repair-requests 200 in 265ms
+ GET /admin/cereri 200 in 243ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.2s (677 modules)
+ GET / 200 in 3295ms
+ ✓ Compiled in 668ms (257 modules)
+ ○ Compiling /admin/cereri/[id] ...
+ ✓ Compiled /admin/cereri/[id] in 1707ms (719 modules)
+ ✓ Compiled in 673ms (272 modules)
+ GET /admin/cereri/cmoopxvpd0004e5xch2nmwudp 200 in 6449ms
+ GET /admin/cereri 200 in 803ms
+ GET /admin/cereri/cmoooctgi0004e5s0esv27lz2 200 in 218ms
+ GET /admin/cereri 200 in 132ms
+ GET /admin/cereri/cmoopxvpd0004e5xch2nmwudp 200 in 195ms
+ GET /admin/cereri 200 in 148ms
+ GET /whatsapp-demo 200 in 197ms
+ ✓ Compiled in 1138ms (258 modules)
